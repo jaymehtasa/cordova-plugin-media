@@ -173,7 +173,8 @@ Media.prototype.setRate = function(rate) {
     if (cordova.platformId === 'ios'){
         exec(null, null, "Media", "setRate", [this.id, rate]);
     } else {
-        console.warn('media.setRate method is currently not supported for', cordova.platformId, 'platform.');
+        exec(null, null, "Media", "setRate", [this.id, rate]);
+        // console.warn('media.setRate method is currently not supported for', cordova.platformId, 'platform.');
     }
 };
 
